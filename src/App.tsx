@@ -12,8 +12,10 @@ import {
   BookOpen,
   ShieldCheck,
   UserPlus,
+  Share2,
 } from 'lucide-react';
 import { Navbar } from './components/Navbar';
+import { storage } from './services/storage';
 import { GlobalAssistant } from './components/GlobalAssistant';
 import { DailyCheckInModal } from './components/DailyCheckInModal';
 import { DashboardPage } from './pages/DashboardPage';
@@ -40,6 +42,7 @@ const AppContent: React.FC = () => {
     { path: '/resources', label: 'Curated Hub', desc: 'Free verified guides', icon: BookOpen },
     { path: '/privacy', label: 'DPDP Privacy', desc: 'Consents, export & delete', icon: ShieldCheck },
     { path: '/onboarding', label: 'Setup Passport', desc: '3-step plan generator', icon: UserPlus },
+    { path: `/passport/${storage.getDPDP().shareablePassportId || 'preview'}`, label: 'Recruiter View', desc: 'Your public proof passport', icon: Share2 },
   ];
 
   const isMoreActive = moreLinks.some((l) => location.pathname === l.path);

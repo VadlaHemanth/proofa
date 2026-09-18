@@ -133,7 +133,7 @@ ${resume.certificationsAndProof.map((c) => `• ${c.title} - ${c.issuer} (${c.da
         <div className="space-y-0.5">
           <p className="font-bold">Interview Defense Guarantee</p>
           <p className="text-slate-800">
-            Every green badge <span className="inline-flex items-center font-bold px-1.5 py-0.5 bg-slate-100 text-slate-800 rounded text-[10px]">VERIFIED SOURCE</span> represents code that has been parsed on GitHub or confirmed live. In campus interviews, candidates who can demo their source get hired 3x faster than candidates with buzzword-stuffed résumés.
+            Every <span className="inline-flex items-center font-bold px-1.5 py-0.5 bg-slate-900 text-white rounded text-[10px]">VERIFIED SOURCE</span> badge represents code that has been parsed on GitHub or confirmed live. In campus interviews, candidates who can demo their source get hired 3x faster than candidates with buzzword-stuffed résumés.
           </p>
         </div>
       </div>

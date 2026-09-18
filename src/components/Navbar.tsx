@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckIn }) => {
 
   return (
     <header className="sticky top-2 sm:top-3 z-40 px-2 sm:px-4">
-      <div className="max-w-7xl mx-auto glass rounded-2xl px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto glass rounded-2xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-2 h-16">
           {/* Brand Logo & Wedge Tagline */}
           <div className="flex items-center space-x-3 shrink-0 min-w-0">
@@ -48,11 +48,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckIn }) => {
                 <ShieldCheck className="w-6 h-6 relative drop-shadow" />
               </div>
               <div>
-                <span className="font-display font-bold text-xl tracking-tight text-slate-900 flex items-center gap-1.5">
+                <span className="font-display font-bold text-xl tracking-tight text-slate-900 flex items-center gap-1">
                   <span>Proof<span className="text-brand-600">a</span></span>
-                  <span className="text-[10px] font-semibold tracking-wide bg-brand-50 text-brand-700 px-1.5 py-0.5 rounded border border-brand-200 uppercase">
-                    Passport
-                  </span>
                 </span>
                 <p className="text-[11px] text-slate-500 font-medium hidden sm:block leading-none">
                   Private Growth & Verified Evidence
@@ -62,7 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckIn }) => {
           </div>
 
           {/* Navigation Links (desktop/tablet: scrollable strip, never overflows page) */}
-          <nav className="hidden lg:flex flex-1 min-w-0 items-center gap-0.5 overflow-x-auto scrollbar-none px-2 text-xs font-medium">
+          <nav className="hidden lg:flex flex-1 min-w-0 items-center gap-0.5 overflow-x-auto scrollbar-none px-2 text-xs font-medium [mask-image:linear-gradient(to_right,black_calc(100%-24px),transparent)]">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = location.pathname === item.path;
@@ -102,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckIn }) => {
             <Link
               to={`/passport/${dpdp.shareablePassportId || 'preview'}`}
               target="_blank"
-              className="hidden xl:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors border border-slate-200 whitespace-nowrap"
+              className="hidden 2xl:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors border border-slate-200 whitespace-nowrap"
               title="View recruiter-facing passport link"
             >
               <Share2 className="w-3.5 h-3.5 text-slate-500" />

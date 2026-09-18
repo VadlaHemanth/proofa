@@ -58,7 +58,7 @@ export const ProofItemCard: React.FC<ProofItemCardProps> = ({ item, onToggleShar
   };
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all p-4 flex flex-col justify-between group">
+    <div className="bg-white rounded-xl border border-slate-200/90 shadow-soft hover:shadow-md transition-all p-4 flex flex-col justify-between group">
       <div>
         {/* Top bar: Type + Verification status */}
         <div className="flex items-center justify-between gap-2 mb-2.5">

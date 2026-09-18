@@ -3,7 +3,7 @@ import { HeartHandshake, PhoneCall, ShieldAlert } from 'lucide-react';
 
 export const SafetyCrisisBanner: React.FC = () => {
   return (
-    <div className="bg-rose-50 border-2 border-rose-300/80 rounded-2xl p-5 shadow-sm space-y-3">
+    <div className="bg-rose-50 border-2 border-rose-300/80 rounded-2xl p-5 shadow-soft space-y-3">
       <div className="flex items-center space-x-2.5 text-rose-800">
         <div className="w-8 h-8 rounded-full bg-rose-200 text-rose-800 flex items-center justify-center shrink-0">
           <HeartHandshake className="w-5 h-5" />

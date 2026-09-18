@@ -36,14 +36,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckIn }) => {
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <header className="sticky top-0 z-40 bg-white/70 backdrop-blur-xl backdrop-saturate-150 supports-[backdrop-filter]:bg-white/60 border-b border-black/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-2 h-16">
           {/* Brand Logo & Wedge Tagline */}
           <div className="flex items-center space-x-3 shrink-0 min-w-0">
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
-                <ShieldCheck className="w-6 h-6" />
+              <div className="w-10 h-10 rounded-[12px] bg-gradient-to-b from-brand-400 via-brand-600 to-brand-700 flex items-center justify-center text-white shadow-pop ring-1 ring-black/10 group-hover:scale-105 transition-transform relative overflow-hidden">
+                <span className="absolute inset-x-2 top-0.5 h-1/2 rounded-full bg-white/30 blur-[3px] pointer-events-none"></span>
+                <ShieldCheck className="w-6 h-6 relative" />
               </div>
               <div>
                 <span className="font-extrabold text-xl tracking-tight text-slate-900 flex items-center gap-1.5">
@@ -70,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckIn }) => {
                   to={item.path}
                   className={`whitespace-nowrap flex items-center gap-1.5 px-2 py-2 rounded-lg transition-colors ${
                     isActive
-                      ? 'bg-brand-50 text-brand-700 font-semibold shadow-sm'
+                      ? 'bg-brand-50 text-brand-700 font-semibold shadow-soft'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                   }`}
                 >
@@ -86,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckIn }) => {
             {/* 60s Check-in Button */}
             <button
               onClick={onOpenCheckIn}
-              className="shrink-0 relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-sm shadow-emerald-600/20 hover:shadow-md transition-all active:scale-95"
+              className="shrink-0 relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-soft shadow-emerald-600/20 hover:shadow-md transition-all active:scale-95"
               title="Quick 60-second daily check-in"
             >
               <span className="relative flex h-2 w-2 shrink-0">

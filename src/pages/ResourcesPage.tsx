@@ -32,7 +32,7 @@ export const ResourcesPage: React.FC = () => {
   return (
     <div className="space-y-8 pb-12">
       {/* Header Banner */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-2">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft space-y-2">
         <div className="inline-flex items-center space-x-2 text-xs font-bold text-brand-700 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
           <BookOpen className="w-4 h-4 text-brand-600" />
           <span>Curated Resource Engine • Zero Spam / No Paid Course Funnels</span>
@@ -90,7 +90,7 @@ export const ResourcesPage: React.FC = () => {
         {filteredResources.map((res) => (
           <div
             key={res.id}
-            className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4"
+            className="bg-white rounded-2xl border border-slate-200 p-5 shadow-soft hover:shadow-md transition-all flex flex-col justify-between space-y-4"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">

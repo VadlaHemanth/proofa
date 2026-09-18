@@ -117,7 +117,7 @@ export const ProofLockerPage: React.FC = () => {
   return (
     <div className="space-y-8 pb-12">
       {/* Top Banner */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <div className="space-y-2">
           <div className="inline-flex items-center space-x-2 text-xs font-bold text-brand-700 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
             <ShieldCheck className="w-4 h-4 text-brand-600" />
@@ -190,7 +190,7 @@ export const ProofLockerPage: React.FC = () => {
       {/* Add Proof Modal */}
       {isAddingProof && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-sm p-4">
-          <div className="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto">
+          <div className="glass-deep rounded-[24px] max-w-lg w-full p-6 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center font-bold">
@@ -361,7 +361,7 @@ export const ProofLockerPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isVerifying}
-                  className="inline-flex items-center space-x-1.5 px-4 py-2 text-white bg-brand-600 hover:bg-brand-700 rounded-lg font-bold shadow-sm active:scale-95 transition-all disabled:opacity-50"
+                  className="inline-flex items-center space-x-1.5 px-4 py-2 text-white bg-brand-600 hover:bg-brand-700 rounded-lg font-bold shadow-soft active:scale-95 transition-all disabled:opacity-50"
                 >
                   <ShieldCheck className="w-4 h-4" />
                   <span>{isVerifying ? 'Verifying Source...' : 'Verify & Add to Locker'}</span>

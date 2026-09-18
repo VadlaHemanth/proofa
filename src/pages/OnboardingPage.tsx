@@ -120,7 +120,7 @@ export const OnboardingPage: React.FC = () => {
       </div>
 
       {/* Step Form Box */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft">
         {step === 1 && (
           <div className="space-y-4 text-xs">
             <h3 className="text-base font-bold text-slate-900">Step 1: Academic Reality & Target Role</h3>

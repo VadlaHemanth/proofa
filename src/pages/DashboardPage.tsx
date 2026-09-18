@@ -61,29 +61,30 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
   return (
     <div className="space-y-8 pb-12">
       {/* Hero Welcome & Academic Context Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-brand-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
-        <div className="absolute -right-12 -top-12 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="glass rounded-4xl p-6 sm:p-8 relative overflow-hidden">
+        <div className="absolute -right-12 -top-12 w-64 h-64 bg-brand-400/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute -left-16 -bottom-16 w-72 h-72 bg-purple-400/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2">
-            <div className="inline-flex max-w-full items-center gap-x-2 bg-brand-500/20 text-brand-300 text-xs px-3 py-1 rounded-full border border-brand-500/30">
-              <Sparkles className="w-3.5 h-3.5 shrink-0" />
+            <div className="inline-flex max-w-full items-center gap-x-2 bg-brand-50/80 text-brand-700 text-xs px-3 py-1 rounded-full border border-brand-200/70 shadow-soft">
+              <Sparkles className="w-3.5 h-3.5 shrink-0 text-brand-500" />
               <span className="hidden min-[480px]:inline">Private Student Growth Passport • Hyderabad JNTUH Wedge</span>
               <span className="min-[480px]:hidden">Student Growth Passport</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
               Welcome back, {profile.fullName.split(' ')[0]}
             </h1>
-            <p className="text-sm text-slate-300 max-w-xl break-words">
-              Targeting <span className="font-semibold text-white">{goal.targetRole}</span> ({goal.stipendExpectation}). Your timetable prioritizes your college mid-terms while building verifiable proof every week.
+            <p className="text-sm text-slate-600 max-w-xl break-words">
+              Targeting <span className="font-semibold text-slate-900">{goal.targetRole}</span> ({goal.stipendExpectation}). Your timetable prioritizes your college mid-terms while building verifiable proof every week.
             </p>
           </div>
 
-          <div className="flex flex-row flex-wrap md:flex-col md:flex-nowrap items-start md:items-end justify-between gap-3 border-t md:border-t-0 md:border-l border-slate-700/60 pt-4 md:pt-0 md:pl-6">
+          <div className="flex flex-row flex-wrap md:flex-col md:flex-nowrap items-start md:items-end justify-between gap-3 border-t md:border-t-0 md:border-l border-black/5 pt-4 md:pt-0 md:pl-6">
             <div className="text-left md:text-right">
-              <span className="text-xs text-slate-400">Role Readiness</span>
+              <span className="text-xs text-slate-500">Role Readiness</span>
               <div className="flex items-center space-x-2">
-                <span className="text-2xl font-black text-emerald-400">{readiness.readinessScore}</span>
-                <span className="text-xs text-slate-400">/ 10</span>
+                <span className="text-2xl font-black text-emerald-600">{readiness.readinessScore}</span>
+                <span className="text-xs text-slate-500">/ 10</span>
               </div>
             </div>
 
@@ -99,13 +100,13 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
 
         {/* Exam Alert Reminder Bar */}
         {constraints.upcomingExams.length > 0 && (
-          <div className="mt-6 pt-4 border-t border-slate-700/50 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-300">
+          <div className="mt-6 pt-4 border-t border-black/5 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 min-w-0">
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0"></span>
-              <span className="font-semibold text-amber-300">Upcoming Academic Checkpoint:</span>
+              <span className="font-semibold text-amber-700">Upcoming Academic Checkpoint:</span>
               <span className="break-words">{constraints.upcomingExams[0].title} on {constraints.upcomingExams[0].date}</span>
             </div>
-            <span className="text-[11px] text-slate-400 italic">
+            <span className="text-[11px] text-slate-500 italic">
               Plan automatically lowered coding load on exam day.
             </span>
           </div>
@@ -160,7 +161,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
       {/* CORE 2: Weekly Proof Milestone & Readiness Highlight */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Weekly Proof Milestone */}
-        <div className="lg:col-span-2 bg-gradient-to-br from-brand-50/70 via-white to-slate-50 rounded-2xl border border-brand-100 p-6 shadow-sm space-y-4">
+        <div className="lg:col-span-2 bg-gradient-to-br from-brand-50/70 via-white to-slate-50 rounded-2xl border border-brand-100 p-6 shadow-soft space-y-4">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-brand-700 flex items-center gap-1.5">
               <FolderGit2 className="w-4 h-4 text-brand-600" />
@@ -193,7 +194,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
         </div>
 
         {/* Explainable Readiness Quick Glance */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between space-y-4">
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-soft flex flex-col justify-between space-y-4">
           <div>
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
@@ -235,7 +236,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
       </div>
 
       {/* CORE 3: 7-Day Adaptive Timetable with Exam Integration */}
-      <section className="space-y-4 bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+      <section className="space-y-4 bg-white rounded-2xl border border-slate-200 p-6 shadow-soft">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
@@ -270,7 +271,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
                 onClick={() => setSelectedDayIndex(idx)}
                 className={`shrink-0 px-3.5 py-2 rounded-xl text-xs font-semibold text-left transition-all border ${
                   isSelected
-                    ? 'bg-brand-600 text-white border-brand-600 shadow-sm'
+                    ? 'bg-brand-600 text-white border-brand-600 shadow-soft'
                     : day.isExamDay
                     ? 'bg-purple-50 text-purple-800 border-purple-200 hover:bg-purple-100'
                     : isToday

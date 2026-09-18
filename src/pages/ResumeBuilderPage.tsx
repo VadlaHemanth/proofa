@@ -81,7 +81,7 @@ ${resume.certificationsAndProof.map((c) => `• ${c.title} - ${c.issuer} (${c.da
   return (
     <div className="space-y-8 pb-16">
       {/* Top Banner & Policy Notice */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-6 print:hidden">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft flex flex-col sm:flex-row sm:items-center justify-between gap-6 print:hidden">
         <div className="space-y-2">
           <div className="inline-flex items-center space-x-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
@@ -112,14 +112,14 @@ ${resume.certificationsAndProof.map((c) => `• ${c.title} - ${c.issuer} (${c.da
 
           <button
             onClick={handleCopyText}
-            className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 shadow-sm transition-colors"
+            className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 shadow-soft transition-colors"
           >
             <span>{copiedNotification ? 'Copied ATS Text!' : 'Copy Plaintext ATS'}</span>
           </button>
 
           <button
             onClick={handlePrint}
-            className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 shadow-sm shadow-brand-500/20 active:scale-95 transition-all"
+            className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 shadow-soft shadow-brand-500/20 active:scale-95 transition-all"
           >
             <Printer className="w-4 h-4" />
             <span>Print / Save PDF</span>

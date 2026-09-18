@@ -14,6 +14,7 @@ import {
   UserPlus,
 } from 'lucide-react';
 import { Navbar } from './components/Navbar';
+import { GlobalAssistant } from './components/GlobalAssistant';
 import { DailyCheckInModal } from './components/DailyCheckInModal';
 import { DashboardPage } from './pages/DashboardPage';
 import { ProofLockerPage } from './pages/ProofLockerPage';
@@ -29,6 +30,7 @@ import { PublicPassportPage } from './pages/PublicPassportPage';
 const AppContent: React.FC = () => {
   const [isCheckInOpen, setIsCheckInOpen] = useState(false);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
+  const [isAssistantOpen, setIsAssistantOpen] = useState(false);
   const location = useLocation();
 
   const isPublicPassport = location.pathname.startsWith('/passport');
@@ -43,7 +45,7 @@ const AppContent: React.FC = () => {
   const isMoreActive = moreLinks.some((l) => location.pathname === l.path);
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans">
+    <div className="min-h-screen flex flex-col text-[#1d1d1f] font-sans">
       {!isPublicPassport && (
         <Navbar onOpenCheckIn={() => setIsCheckInOpen(true)} />
       )}
@@ -98,7 +100,7 @@ const AppContent: React.FC = () => {
               })}
             </div>
           )}
-          <nav className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-2 pt-1.5 pb-[max(0.6rem,env(safe-area-inset-bottom))] shadow-[0_-4px_16px_rgba(15,23,42,0.06)]">
+          <nav className="lg:hidden fixed bottom-[max(0.65rem,env(safe-area-inset-bottom))] inset-x-3 z-40 glass rounded-[22px] px-2 py-1.5">
             <div className="grid grid-cols-6 gap-0.5">
               {[
                 { path: '/', label: 'Today', icon: Compass },
@@ -141,7 +143,7 @@ const AppContent: React.FC = () => {
       )}
 
       {!isPublicPassport && (
-        <footer className="hidden lg:block mt-auto border-t border-slate-200 bg-white py-6 text-xs text-slate-500">
+        <footer className="hidden lg:block mt-auto border-t border-black/5 bg-white/70 backdrop-blur-xl py-6 text-xs text-slate-500">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="flex items-center gap-1">
               <span className="font-bold text-slate-800">Proofa</span> • Private Student Growth Passport • Hyderabad Tech Wedge
@@ -156,6 +158,22 @@ const AppContent: React.FC = () => {
           </div>
         </footer>
       )}
+
+      {/* Floating assistant orb — quick chat from any page */}
+      {!isPublicPassport && !isAssistantOpen && (
+        <button
+          onClick={() => setIsAssistantOpen(true)}
+          aria-label="Open Proofa quick assistant"
+          title="Ask Proofa anything"
+          className="orb-in fixed z-40 bottom-[104px] lg:bottom-6 right-4 lg:right-6 w-14 h-14 rounded-full bg-gradient-to-b from-brand-400 via-brand-600 to-brand-700 text-white flex items-center justify-center shadow-pop ring-1 ring-black/10 transition-transform hover:scale-105 active:scale-95 overflow-hidden"
+        >
+          <span className="absolute inset-x-2.5 top-1 h-1/2 rounded-full bg-white/40 blur-[3px] pointer-events-none"></span>
+          <MessageSquareQuote className="w-6 h-6 relative" />
+          <span className="absolute top-2.5 right-2.5 w-2.5 h-2.5 rounded-full bg-emerald-400 ring-2 ring-white/80"></span>
+        </button>
+      )}
+
+      <GlobalAssistant open={isAssistantOpen} onClose={() => setIsAssistantOpen(false)} />
 
       <DailyCheckInModal
         isOpen={isCheckInOpen}

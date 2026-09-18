@@ -57,7 +57,7 @@ export const ReadinessPage: React.FC = () => {
   return (
     <div className="space-y-8 pb-12">
       {/* Header */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <div className="space-y-2">
           <div className="inline-flex items-center space-x-2 text-xs font-bold text-brand-700 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
             <Award className="w-4 h-4 text-brand-600" />
@@ -92,40 +92,40 @@ export const ReadinessPage: React.FC = () => {
       {/* Big Score & Next Best Action Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Score Card */}
-        <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-6 shadow-md flex flex-col justify-between space-y-6">
+        <div className="glass rounded-4xl p-6 flex flex-col justify-between space-y-6">
           <div>
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
                 Internship Readiness
               </span>
-              <span className="text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded-full border border-emerald-500/30">
+              <span className="text-[11px] font-semibold bg-emerald-500/10 text-emerald-700 px-2.5 py-0.5 rounded-full border border-emerald-500/20 whitespace-nowrap">
                 Transparent Formula
               </span>
             </div>
 
             <div className="mt-4 flex items-baseline space-x-2">
-              <span className="text-6xl font-black text-white">{readiness.readinessScore}</span>
+              <span className="text-6xl font-black text-slate-900 tracking-tight">{readiness.readinessScore}</span>
               <span className="text-2xl text-slate-400 font-medium">/ 10</span>
             </div>
 
-            <div className="w-full bg-slate-700/60 h-3 rounded-full mt-4 overflow-hidden">
+            <div className="w-full bg-slate-900/10 h-3 rounded-full mt-4 overflow-hidden">
               <div
-                className="bg-emerald-400 h-full rounded-full transition-all duration-700"
+                className="bg-gradient-to-r from-emerald-400 to-emerald-600 h-full rounded-full transition-all duration-700"
                 style={{ width: `${readiness.readinessScore * 10}%` }}
               ></div>
             </div>
           </div>
 
-          <div className="text-xs text-slate-300 space-y-1 pt-4 border-t border-slate-700/60">
-            <div className="flex justify-between">
+          <div className="text-xs text-slate-600 space-y-1 pt-4 border-t border-black/5">
+            <div className="flex justify-between gap-2">
               <span>Demonstrated Criteria:</span>
-              <span className="font-bold text-emerald-400">
+              <span className="font-bold text-emerald-600">
                 {readiness.criteria.filter((c) => c.status === 'met').length} of {readiness.criteria.length}
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between gap-2">
               <span>Estimated Gap Closure:</span>
-              <span className="font-bold text-white">
+              <span className="font-bold text-slate-900 text-right">
                 ~{readiness.recommendedGapClosureTimeWeeks} weeks of proof work
               </span>
             </div>
@@ -133,7 +133,7 @@ export const ReadinessPage: React.FC = () => {
         </div>
 
         {/* Next Best Action Card */}
-        <div className="lg:col-span-2 bg-white rounded-3xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between space-y-4">
+        <div className="lg:col-span-2 bg-white rounded-3xl border border-slate-200 p-6 shadow-soft flex flex-col justify-between space-y-4">
           <div className="space-y-2">
             <div className="flex items-center space-x-2 text-brand-600 font-bold text-xs uppercase tracking-wider">
               <Sparkles className="w-4 h-4" />
@@ -150,7 +150,7 @@ export const ReadinessPage: React.FC = () => {
           <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
             <Link
               to="/proof-locker"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 transition-colors shadow-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 transition-colors shadow-soft"
             >
               <FolderGit2 className="w-4 h-4 shrink-0" />
               <span>Add Proof to Fulfill Criterion</span>
@@ -168,7 +168,7 @@ export const ReadinessPage: React.FC = () => {
       </div>
 
       {/* Detailed Benchmark Checklist (Explainable Breakdown) */}
-      <section className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+      <section className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft space-y-6">
         <div>
           <h2 className="text-lg font-black text-slate-900">
             6 Core Benchmarks for {targetRole}

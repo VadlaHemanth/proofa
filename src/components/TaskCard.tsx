@@ -35,7 +35,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, onToggle, onReschedule
           ? 'bg-slate-50/80 border-slate-200 text-slate-500'
           : task.isExamDayTask
           ? 'bg-purple-50/30 border-purple-200 hover:border-purple-300'
-          : 'bg-white border-slate-200 hover:border-brand-300 hover:shadow-sm'
+          : 'bg-white border-slate-200 hover:border-brand-300 hover:shadow-soft'
       }`}
     >
       <div className="flex items-start justify-between gap-3">

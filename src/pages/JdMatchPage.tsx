@@ -72,7 +72,7 @@ ${storage.getProfile().githubUrl}
   return (
     <div className="space-y-8 pb-16">
       {/* Top Banner */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <div className="space-y-2">
           <div className="inline-flex items-center space-x-2 text-xs font-bold text-brand-700 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
             <ScanSearch className="w-4 h-4 text-brand-600" />
@@ -87,19 +87,19 @@ ${storage.getProfile().githubUrl}
         </div>
 
         {/* Agency Over Automation Pill */}
-        <div className="bg-slate-900 text-white p-4 rounded-2xl max-w-xs text-xs space-y-1 self-start sm:self-center shrink-0">
-          <div className="flex items-center space-x-1.5 font-bold text-amber-400">
-            <AlertTriangle className="w-4 h-4" />
+        <div className="glass rounded-2xl p-4 max-w-xs text-xs space-y-1 self-start sm:self-center shrink-0">
+          <div className="flex items-center gap-1.5 font-bold text-amber-600">
+            <AlertTriangle className="w-4 h-4 shrink-0" />
             <span>Agency Over Automation</span>
           </div>
-          <p className="text-slate-300 text-[11px] leading-relaxed">
+          <p className="text-slate-600 text-[11px] leading-relaxed">
             We never auto-apply with spam bots. High match means you are ready to review and submit yourself.
           </p>
         </div>
       </div>
 
       {/* Input Section: Curated Samples or Custom Paste */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-5">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-soft space-y-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <h2 className="text-base font-bold text-slate-900">
             Choose a Curated Opening or Paste Any Internship JD
@@ -163,7 +163,7 @@ ${storage.getProfile().githubUrl}
 
           <button
             type="submit"
-            className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 active:scale-95 transition-all shadow-sm"
+            className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 active:scale-95 transition-all shadow-soft"
           >
             <ScanSearch className="w-4 h-4" />
             <span>Analyze Match Against My Proof Locker</span>
@@ -175,26 +175,26 @@ ${storage.getProfile().githubUrl}
       {matchReport && (
         <div className="space-y-6">
           {/* Top Verdict Row */}
-          <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-3xl p-6 sm:p-8 shadow-md flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="glass rounded-4xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="space-y-2">
-              <div className="inline-flex items-center space-x-2 bg-brand-500/20 text-brand-300 text-xs px-3 py-1 rounded-full border border-brand-500/30">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Proof Alignment Audit: {matchReport.jobTitle}</span>
+              <div className="inline-flex max-w-full items-center gap-x-2 bg-brand-50/80 text-brand-700 text-xs px-3 py-1 rounded-full border border-brand-200/70 shadow-soft">
+                <Sparkles className="w-3.5 h-3.5 shrink-0 text-brand-500" />
+                <span className="break-words">Proof Alignment Audit: {matchReport.jobTitle}</span>
               </div>
               <h2 className="text-xl sm:text-2xl font-black">{matchReport.companyName}</h2>
-              <p className="text-xs text-slate-300 max-w-xl leading-relaxed">
-                Verdict: <strong className="text-emerald-400">{matchReport.readinessVerdict}</strong>. We matched required skills directly against your verified repository commits, schemas, and live URLs.
+              <p className="text-xs text-slate-600 max-w-xl leading-relaxed">
+                Verdict: <strong className="text-emerald-600">{matchReport.readinessVerdict}</strong>. We matched required skills directly against your verified repository commits, schemas, and live URLs.
               </p>
             </div>
 
-            <div className="text-left md:text-right shrink-0 border-t md:border-t-0 md:border-l border-slate-700/60 pt-4 md:pt-0 md:pl-6">
-              <span className="text-xs text-slate-400">Demonstrated Alignment</span>
+            <div className="text-left md:text-right shrink-0 border-t md:border-t-0 md:border-l border-black/5 pt-4 md:pt-0 md:pl-6">
+              <span className="text-xs text-slate-500">Demonstrated Alignment</span>
               <div className="flex items-baseline space-x-1">
-                <span className="text-5xl font-black text-emerald-400">
+                <span className="text-5xl font-black text-emerald-600">
                   {matchReport.overallMatchPercentage}%
                 </span>
               </div>
-              <span className="text-[11px] text-slate-400">
+              <span className="text-[11px] text-slate-500">
                 {matchReport.matchedSkills.length} of{' '}
                 {matchReport.matchedSkills.length + matchReport.missingSkills.length} skills proven
               </span>
@@ -204,7 +204,7 @@ ${storage.getProfile().githubUrl}
           {/* 2-Column: Matched vs Missing */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Matched Skills with Proof */}
-            <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-4">
+            <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-soft space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-bold text-slate-900 flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600" />
@@ -231,7 +231,7 @@ ${storage.getProfile().githubUrl}
             </div>
 
             {/* Missing Skills with Action */}
-            <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-4">
+            <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-soft space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-bold text-slate-900 flex items-center space-x-2">
                   <AlertCircle className="w-4 h-4 text-amber-500" />
@@ -261,7 +261,7 @@ ${storage.getProfile().githubUrl}
           </div>
 
           {/* 7-Day Targeted Gap Closure Sprint Plan */}
-          <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
+          <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft space-y-4">
             <div>
               <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
                 <Clock className="w-5 h-5 text-brand-600" />
@@ -291,21 +291,21 @@ ${storage.getProfile().githubUrl}
           </div>
 
           {/* Ethical Application Pitch Copy & Review */}
-          <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md space-y-4">
+          <div className="glass rounded-4xl p-6 sm:p-8 space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
-                <h3 className="text-base font-bold text-white flex items-center space-x-2">
-                  <Send className="w-4 h-4 text-emerald-400" />
+                <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
+                  <Send className="w-4 h-4 text-emerald-600 shrink-0" />
                   <span>Ready-to-Review Truthful Application Pitch</span>
                 </h3>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-slate-500">
                   Review the pitch below, customize personal details, and submit directly through the company's official portal.
                 </p>
               </div>
 
               <button
                 onClick={handleCopyApplicationPitch}
-                className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 transition-colors shrink-0"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-slate-800 bg-white border border-black/10 shadow-soft hover:border-brand-300 hover:text-brand-700 transition-colors shrink-0"
               >
                 <Copy className="w-3.5 h-3.5" />
                 <span>{copiedAppText ? 'Copied Pitch!' : 'Copy Application Text'}</span>
@@ -315,9 +315,9 @@ ${storage.getProfile().githubUrl}
             {/* Checklist items */}
             <div className="space-y-2 pt-2 text-xs">
               {matchReport.applicationChecklist.map((item, idx) => (
-                <div key={idx} className="flex items-center space-x-2 text-slate-300">
-                  <CheckCircle2 className={`w-4 h-4 shrink-0 ${item.done ? 'text-emerald-400' : 'text-slate-500'}`} />
-                  <span className={item.done ? 'text-slate-200 font-medium' : 'text-slate-400'}>
+                <div key={idx} className="flex items-center gap-2 text-slate-600">
+                  <CheckCircle2 className={`w-4 h-4 shrink-0 ${item.done ? 'text-emerald-500' : 'text-slate-300'}`} />
+                  <span className={item.done ? 'text-slate-800 font-medium' : 'text-slate-500'}>
                     {item.item}
                   </span>
                 </div>

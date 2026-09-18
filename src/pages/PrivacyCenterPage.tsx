@@ -69,7 +69,7 @@ export const PrivacyCenterPage: React.FC = () => {
   return (
     <div className="space-y-8 pb-16 max-w-4xl mx-auto">
       {/* Header */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-3">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft space-y-3">
         <div className="inline-flex items-center space-x-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
           <ShieldCheck className="w-4 h-4 text-emerald-600" />
           <span>India DPDP Act 2023 & DPDP Rules 2025 Compliant</span>
@@ -90,7 +90,7 @@ export const PrivacyCenterPage: React.FC = () => {
       )}
 
       {/* Purpose-Specific Consent Toggles */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft space-y-6">
         <div>
           <h2 className="text-base font-bold text-slate-900">
             Purpose-Specific Consent Controls
@@ -209,7 +209,7 @@ export const PrivacyCenterPage: React.FC = () => {
       {/* DPDP Data Rights: Portability & Erasure */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {/* Export Data */}
-        <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between space-y-4">
+        <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-soft flex flex-col justify-between space-y-4">
           <div className="space-y-2">
             <div className="w-9 h-9 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center">
               <Download className="w-5 h-5" />
@@ -232,7 +232,7 @@ export const PrivacyCenterPage: React.FC = () => {
         </div>
 
         {/* Right to Erasure */}
-        <div className="bg-white rounded-3xl border border-rose-200 p-6 shadow-sm flex flex-col justify-between space-y-4">
+        <div className="bg-white rounded-3xl border border-rose-200 p-6 shadow-soft flex flex-col justify-between space-y-4">
           <div className="space-y-2">
             <div className="w-9 h-9 rounded-xl bg-rose-50 text-rose-700 flex items-center justify-center">
               <Trash2 className="w-5 h-5" />

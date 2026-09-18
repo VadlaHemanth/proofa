@@ -78,7 +78,7 @@ export const AiCompanionPage: React.FC = () => {
   return (
     <div className="space-y-6 pb-12 max-w-4xl mx-auto">
       {/* Privacy Isolation Header */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-3">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-soft space-y-3">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center font-bold">
@@ -108,7 +108,7 @@ export const AiCompanionPage: React.FC = () => {
       </div>
 
       {/* Chat Area Container */}
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-sm flex flex-col h-[62dvh] min-h-[430px] max-h-[620px] overflow-hidden">
+      <div className="bg-white rounded-3xl border border-slate-200 shadow-soft flex flex-col h-[62dvh] min-h-[430px] max-h-[620px] overflow-hidden">
         {/* Messages Scroll Area */}
         <div className="flex-1 min-h-0 overflow-y-auto p-3.5 sm:p-6 space-y-4">
           {messages.map((msg) => {

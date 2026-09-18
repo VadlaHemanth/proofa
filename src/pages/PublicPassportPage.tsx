@@ -36,7 +36,7 @@ export const PublicPassportPage: React.FC = () => {
 
   if (!dpdp.recruiterSharingConsent) {
     return (
-      <div className="max-w-2xl mx-auto my-16 bg-white rounded-3xl border border-slate-200 p-8 text-center space-y-4 shadow-sm">
+      <div className="max-w-2xl mx-auto my-16 bg-white rounded-3xl border border-slate-200 p-8 text-center space-y-4 shadow-soft">
         <div className="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mx-auto">
           <ShieldCheck className="w-6 h-6" />
         </div>
@@ -51,36 +51,37 @@ export const PublicPassportPage: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto space-y-8 pb-16 pt-4">
       {/* Recruiter Verified Header Card */}
-      <div className="bg-gradient-to-r from-slate-950 via-slate-900 to-brand-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
+      <div className="glass rounded-4xl p-6 sm:p-10 relative overflow-hidden">
+        <div className="absolute -right-16 -top-16 w-72 h-72 bg-brand-400/15 rounded-full blur-3xl pointer-events-none"></div>
         <div className="mb-4 sm:mb-0 sm:absolute sm:top-0 sm:right-0 sm:p-6 flex items-center gap-2">
-          <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-700 border border-emerald-500/25 shadow-soft">
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
             <span>Verified Student Growth Passport</span>
           </span>
         </div>
 
-        <div className="space-y-4 max-w-2xl">
+        <div className="space-y-4 max-w-2xl relative">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-400">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-600">
               Candidate Profile • Hyderabad Tech Wedge
             </span>
             <h1 className="text-3xl sm:text-4xl font-black tracking-tight mt-1">
               {profile.fullName}
             </h1>
-            <p className="text-sm text-slate-300 font-medium mt-1">
+            <p className="text-sm text-slate-600 font-medium mt-1">
               {profile.degree} • {profile.collegeName} (Class of {profile.graduationYear})
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2 pt-2 text-xs">
-            <span className="px-3 py-1 rounded-lg bg-white/10 text-white font-semibold">
+            <span className="px-3 py-1 rounded-lg bg-white/85 border border-black/5 shadow-soft text-slate-800 font-semibold">
               Target Role: {goal.targetRole}
             </span>
-            <span className="px-3 py-1 rounded-lg bg-white/10 text-white">
+            <span className="px-3 py-1 rounded-lg bg-white/85 border border-black/5 shadow-soft text-slate-600">
               Location: {profile.city}, {profile.state} (Open to Hybrid / Remote)
             </span>
             {profile.cgpaPublic && (
-              <span className="px-3 py-1 rounded-lg bg-white/10 text-white font-semibold">
+              <span className="px-3 py-1 rounded-lg bg-white/85 border border-black/5 shadow-soft text-slate-800 font-semibold">
                 CGPA: {profile.cgpa} / 10.0
               </span>
             )}
@@ -90,7 +91,7 @@ export const PublicPassportPage: React.FC = () => {
           <div className="flex flex-wrap items-center gap-2 pt-2 text-xs">
             <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-b from-brand-400 to-brand-600 text-white font-bold shadow-pop ring-1 ring-black/10 transition hover:brightness-105 active:scale-95"
             >
               <Mail className="w-3.5 h-3.5" />
               <span>Connect for Internship</span>
@@ -101,7 +102,7 @@ export const PublicPassportPage: React.FC = () => {
                 href={profile.githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center space-x-1 px-3 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 transition-colors"
+                className="inline-flex items-center gap-1 px-3 py-2 rounded-xl bg-white/85 border border-black/10 shadow-soft text-slate-700 hover:border-brand-300 hover:text-brand-700 transition-colors"
               >
                 <GithubIcon className="w-3.5 h-3.5" />
                 <span>GitHub</span>
@@ -113,7 +114,7 @@ export const PublicPassportPage: React.FC = () => {
                 href={profile.linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center space-x-1 px-3 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 transition-colors"
+                className="inline-flex items-center gap-1 px-3 py-2 rounded-xl bg-white/85 border border-black/10 shadow-soft text-slate-700 hover:border-brand-300 hover:text-brand-700 transition-colors"
               >
                 <Briefcase className="w-3.5 h-3.5" />
                 <span>LinkedIn</span>
@@ -124,7 +125,7 @@ export const PublicPassportPage: React.FC = () => {
       </div>
 
       {/* Role-Readiness Audit Glance for Hiring Managers */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <div className="flex items-center space-x-2 text-brand-600 font-bold text-xs uppercase tracking-wider">
@@ -212,7 +213,7 @@ export const PublicPassportPage: React.FC = () => {
           {filteredProofs.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-all"
+              className="bg-white rounded-2xl border border-slate-200 p-5 shadow-soft flex flex-col justify-between space-y-4 hover:shadow-md transition-all"
             >
               <div className="space-y-2">
                 <div className="flex items-center justify-between">

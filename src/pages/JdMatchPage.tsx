@@ -88,7 +88,7 @@ ${storage.getProfile().githubUrl}
 
         {/* Agency Over Automation Pill */}
         <div className="glass rounded-2xl p-4 max-w-xs text-xs space-y-1 self-start sm:self-center shrink-0">
-          <div className="flex items-center gap-1.5 font-bold text-amber-600">
+          <div className="flex items-center gap-1.5 font-bold text-slate-600">
             <AlertTriangle className="w-4 h-4 shrink-0" />
             <span>Agency Over Automation</span>
           </div>
@@ -183,14 +183,14 @@ ${storage.getProfile().githubUrl}
               </div>
               <h2 className="text-xl sm:text-2xl font-black">{matchReport.companyName}</h2>
               <p className="text-xs text-slate-600 max-w-xl leading-relaxed">
-                Verdict: <strong className="text-emerald-600">{matchReport.readinessVerdict}</strong>. We matched required skills directly against your verified repository commits, schemas, and live URLs.
+                Verdict: <strong className="text-slate-600">{matchReport.readinessVerdict}</strong>. We matched required skills directly against your verified repository commits, schemas, and live URLs.
               </p>
             </div>
 
             <div className="text-left md:text-right shrink-0 border-t md:border-t-0 md:border-l border-black/5 pt-4 md:pt-0 md:pl-6">
               <span className="text-xs text-slate-500">Demonstrated Alignment</span>
               <div className="flex items-baseline space-x-1">
-                <span className="text-5xl font-black text-emerald-600">
+                <span className="text-5xl font-black text-slate-600">
                   {matchReport.overallMatchPercentage}%
                 </span>
               </div>
@@ -207,20 +207,20 @@ ${storage.getProfile().githubUrl}
             <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-soft space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-bold text-slate-900 flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  <CheckCircle2 className="w-4 h-4 text-slate-600" />
                   <span>Demonstrated with Stored Proof</span>
                 </h3>
-                <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                <span className="text-xs font-bold text-slate-700 bg-slate-50 px-2 py-0.5 rounded border border-slate-200">
                   {matchReport.matchedSkills.length} Ready
                 </span>
               </div>
 
               <div className="space-y-3">
                 {matchReport.matchedSkills.map((m, idx) => (
-                  <div key={idx} className="p-3 bg-emerald-50/50 rounded-xl border border-emerald-200/80 text-xs space-y-1">
+                  <div key={idx} className="p-3 bg-slate-50/50 rounded-xl border border-slate-200/80 text-xs space-y-1">
                     <div className="flex items-center justify-between">
-                      <h4 className="font-bold text-emerald-950">{m.skillName}</h4>
-                      <span className="text-[10px] font-mono text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">
+                      <h4 className="font-bold text-slate-950">{m.skillName}</h4>
+                      <span className="text-[10px] font-mono text-slate-700 bg-slate-100 px-1.5 py-0.5 rounded">
                         PROOF LINKED
                       </span>
                     </div>
@@ -234,21 +234,21 @@ ${storage.getProfile().githubUrl}
             <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-soft space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-bold text-slate-900 flex items-center space-x-2">
-                  <AlertCircle className="w-4 h-4 text-amber-500" />
+                  <AlertCircle className="w-4 h-4 text-slate-500" />
                   <span>Gaps to Close Before Applying</span>
                 </h3>
-                <span className="text-xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                <span className="text-xs font-bold text-slate-700 bg-slate-50 px-2 py-0.5 rounded border border-slate-200">
                   {matchReport.missingSkills.length} Missing
                 </span>
               </div>
 
               <div className="space-y-3">
                 {matchReport.missingSkills.map((m, idx) => (
-                  <div key={idx} className="p-3 bg-amber-50/40 rounded-xl border border-amber-200/80 text-xs space-y-1">
+                  <div key={idx} className="p-3 bg-slate-50/40 rounded-xl border border-slate-200/80 text-xs space-y-1">
                     <div className="flex items-center justify-between">
-                      <h4 className="font-bold text-amber-950">{m.skillName}</h4>
+                      <h4 className="font-bold text-slate-950">{m.skillName}</h4>
                       <span className={`text-[10px] font-bold uppercase px-1.5 py-0.5 rounded ${
-                        m.severity === 'critical' ? 'bg-rose-100 text-rose-800' : 'bg-amber-100 text-amber-800'
+                        m.severity === 'critical' ? 'bg-slate-100 text-slate-800' : 'bg-slate-100 text-slate-800'
                       }`}>
                         {m.severity === 'critical' ? 'Critical Gap' : 'Nice to Have'}
                       </span>
@@ -295,7 +295,7 @@ ${storage.getProfile().githubUrl}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                  <Send className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <Send className="w-4 h-4 text-slate-600 shrink-0" />
                   <span>Ready-to-Review Truthful Application Pitch</span>
                 </h3>
                 <p className="text-xs text-slate-500">
@@ -316,7 +316,7 @@ ${storage.getProfile().githubUrl}
             <div className="space-y-2 pt-2 text-xs">
               {matchReport.applicationChecklist.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2 text-slate-600">
-                  <CheckCircle2 className={`w-4 h-4 shrink-0 ${item.done ? 'text-emerald-500' : 'text-slate-300'}`} />
+                  <CheckCircle2 className={`w-4 h-4 shrink-0 ${item.done ? 'text-slate-500' : 'text-slate-300'}`} />
                   <span className={item.done ? 'text-slate-800 font-medium' : 'text-slate-500'}>
                     {item.item}
                   </span>

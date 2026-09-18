@@ -168,7 +168,7 @@ export const ProofLockerPage: React.FC = () => {
         </div>
 
         <div className="text-xs text-slate-600 flex items-center space-x-2">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <CheckCircle2 className="w-4 h-4 text-slate-600" />
           <span>
             <strong className="text-slate-900">{verifiedCount}</strong> of {proofItems.length} items verified
           </span>

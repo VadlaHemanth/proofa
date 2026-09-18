@@ -344,7 +344,7 @@ export const OnboardingPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={!dpdpAgreed}
-                className="inline-flex items-center space-x-1.5 px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-md shadow-emerald-600/20 active:scale-95 transition-all"
+                className="inline-flex items-center space-x-1.5 px-6 py-2.5 rounded-xl bg-slate-600 hover:bg-slate-700 text-white font-bold text-xs shadow-md shadow-slate-600/20 active:scale-95 transition-all"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>Generate My Plan & Enter Passport</span>

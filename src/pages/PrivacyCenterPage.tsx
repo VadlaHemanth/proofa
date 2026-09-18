@@ -70,8 +70,8 @@ export const PrivacyCenterPage: React.FC = () => {
     <div className="space-y-8 pb-16 max-w-4xl mx-auto">
       {/* Header */}
       <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft space-y-3">
-        <div className="inline-flex items-center space-x-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-          <ShieldCheck className="w-4 h-4 text-emerald-600" />
+        <div className="inline-flex items-center space-x-2 text-xs font-bold text-slate-700 bg-slate-50 px-3 py-1 rounded-full border border-slate-200">
+          <ShieldCheck className="w-4 h-4 text-slate-600" />
           <span>India DPDP Act 2023 & DPDP Rules 2025 Compliant</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
@@ -83,8 +83,8 @@ export const PrivacyCenterPage: React.FC = () => {
       </div>
 
       {savedFeedback && (
-        <div className="p-3 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold rounded-xl flex items-center space-x-2">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+        <div className="p-3 bg-slate-50 border border-slate-200 text-slate-800 text-xs font-semibold rounded-xl flex items-center space-x-2">
+          <CheckCircle2 className="w-4 h-4 text-slate-600" />
           <span>{savedFeedback}</span>
         </div>
       )}
@@ -118,7 +118,7 @@ export const PrivacyCenterPage: React.FC = () => {
             <button
               onClick={() => handleToggle('planningDataProcessingConsent')}
               className={`shrink-0 w-11 h-6 rounded-full transition-colors relative ${
-                dpdp.planningDataProcessingConsent ? 'bg-emerald-600' : 'bg-slate-200'
+                dpdp.planningDataProcessingConsent ? 'bg-slate-600' : 'bg-slate-200'
               }`}
             >
               <span
@@ -146,7 +146,7 @@ export const PrivacyCenterPage: React.FC = () => {
             <button
               onClick={() => handleToggle('githubSyncConsent')}
               className={`shrink-0 w-11 h-6 rounded-full transition-colors relative ${
-                dpdp.githubSyncConsent ? 'bg-emerald-600' : 'bg-slate-200'
+                dpdp.githubSyncConsent ? 'bg-slate-600' : 'bg-slate-200'
               }`}
             >
               <span
@@ -174,7 +174,7 @@ export const PrivacyCenterPage: React.FC = () => {
             <button
               onClick={() => handleToggle('recruiterSharingConsent')}
               className={`shrink-0 w-11 h-6 rounded-full transition-colors relative ${
-                dpdp.recruiterSharingConsent ? 'bg-emerald-600' : 'bg-slate-200'
+                dpdp.recruiterSharingConsent ? 'bg-slate-600' : 'bg-slate-200'
               }`}
             >
               <span
@@ -194,12 +194,12 @@ export const PrivacyCenterPage: React.FC = () => {
               <p className="text-slate-600 leading-relaxed">
                 Guarantees that your questions, reflections, and timetable are never used as training context for another student's session.
               </p>
-              <span className="inline-block text-[10px] text-emerald-600 font-bold">
+              <span className="inline-block text-[10px] text-slate-600 font-bold">
                 Always active by architectural constraint
               </span>
             </div>
 
-            <span className="shrink-0 px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded-lg text-[10px] font-bold">
+            <span className="shrink-0 px-2.5 py-1 bg-slate-100 text-slate-800 rounded-lg text-[10px] font-bold">
               LOCKED ACTIVE
             </span>
           </div>
@@ -232,9 +232,9 @@ export const PrivacyCenterPage: React.FC = () => {
         </div>
 
         {/* Right to Erasure */}
-        <div className="bg-white rounded-3xl border border-rose-200 p-6 shadow-soft flex flex-col justify-between space-y-4">
+        <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-soft flex flex-col justify-between space-y-4">
           <div className="space-y-2">
-            <div className="w-9 h-9 rounded-xl bg-rose-50 text-rose-700 flex items-center justify-center">
+            <div className="w-9 h-9 rounded-xl bg-slate-50 text-slate-700 flex items-center justify-center">
               <Trash2 className="w-5 h-5" />
             </div>
             <h3 className="text-sm font-bold text-slate-900">
@@ -247,9 +247,9 @@ export const PrivacyCenterPage: React.FC = () => {
 
           <button
             onClick={handlePurgeAllData}
-            className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-rose-700 bg-rose-50 hover:bg-rose-100 border border-rose-200 transition-colors flex items-center justify-center space-x-2"
+            className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-slate-700 bg-slate-50 hover:bg-slate-100 border border-slate-200 transition-colors flex items-center justify-center space-x-2"
           >
-            <AlertTriangle className="w-4 h-4 text-rose-600" />
+            <AlertTriangle className="w-4 h-4 text-slate-600" />
             <span>Permanently Delete All Data</span>
           </button>
         </div>

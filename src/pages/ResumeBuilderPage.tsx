@@ -83,8 +83,8 @@ ${resume.certificationsAndProof.map((c) => `• ${c.title} - ${c.issuer} (${c.da
       {/* Top Banner & Policy Notice */}
       <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-soft flex flex-col sm:flex-row sm:items-center justify-between gap-6 print:hidden">
         <div className="space-y-2">
-          <div className="inline-flex items-center space-x-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-            <ShieldCheck className="w-4 h-4 text-emerald-600" />
+          <div className="inline-flex items-center space-x-2 text-xs font-bold text-slate-700 bg-slate-50 px-3 py-1 rounded-full border border-slate-200">
+            <ShieldCheck className="w-4 h-4 text-slate-600" />
             <span>Anti-Hallucination Architecture • Source-Linked Bullets Only</span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
@@ -128,12 +128,12 @@ ${resume.certificationsAndProof.map((c) => `• ${c.title} - ${c.issuer} (${c.da
       </div>
 
       {/* Strict Grounding Badge Bar */}
-      <div className="bg-amber-50/80 border border-amber-200 rounded-2xl p-4 text-xs text-amber-900 flex items-start space-x-3 print:hidden">
-        <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+      <div className="bg-slate-50/80 border border-slate-200 rounded-2xl p-4 text-xs text-slate-900 flex items-start space-x-3 print:hidden">
+        <AlertTriangle className="w-4 h-4 text-slate-600 shrink-0 mt-0.5" />
         <div className="space-y-0.5">
           <p className="font-bold">Interview Defense Guarantee</p>
-          <p className="text-amber-800">
-            Every green badge <span className="inline-flex items-center font-bold px-1.5 py-0.5 bg-emerald-100 text-emerald-800 rounded text-[10px]">VERIFIED SOURCE</span> represents code that has been parsed on GitHub or confirmed live. In campus interviews, candidates who can demo their source get hired 3x faster than candidates with buzzword-stuffed résumés.
+          <p className="text-slate-800">
+            Every green badge <span className="inline-flex items-center font-bold px-1.5 py-0.5 bg-slate-100 text-slate-800 rounded text-[10px]">VERIFIED SOURCE</span> represents code that has been parsed on GitHub or confirmed live. In campus interviews, candidates who can demo their source get hired 3x faster than candidates with buzzword-stuffed résumés.
           </p>
         </div>
       </div>
@@ -217,7 +217,7 @@ ${resume.certificationsAndProof.map((c) => `• ${c.title} - ${c.issuer} (${c.da
         <div className="space-y-3">
           <h3 className="text-xs font-bold uppercase tracking-wider font-sans text-slate-900 border-b border-slate-300 pb-0.5 flex items-center justify-between">
             <span>Demonstrated Projects (Proof Grounded)</span>
-            <span className="text-[10px] text-emerald-700 font-semibold font-sans normal-case print:hidden">
+            <span className="text-[10px] text-slate-700 font-semibold font-sans normal-case print:hidden">
               All bullets verified by Proof Locker
             </span>
           </h3>
@@ -255,8 +255,8 @@ ${resume.certificationsAndProof.map((c) => `• ${c.title} - ${c.issuer} (${c.da
                       <li key={bullet.id} className="group leading-relaxed">
                         <span>{bullet.text}</span>
                         {linked && (
-                          <span className="ml-2 inline-flex items-center space-x-1 px-1.5 py-0.5 rounded text-[9px] font-mono font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 print:hidden">
-                            <CheckCircle2 className="w-2.5 h-2.5 text-emerald-600" />
+                          <span className="ml-2 inline-flex items-center space-x-1 px-1.5 py-0.5 rounded text-[9px] font-mono font-semibold bg-slate-50 text-slate-700 border border-slate-200 print:hidden">
+                            <CheckCircle2 className="w-2.5 h-2.5 text-slate-600" />
                             <span>Verified: {linked.type.replace('_', ' ')}</span>
                           </span>
                         )}

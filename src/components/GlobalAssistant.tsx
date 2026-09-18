@@ -104,14 +104,14 @@ export const GlobalAssistant: React.FC<GlobalAssistantProps> = ({ open, onClose 
     >
       {/* Header */}
       <div className="flex items-center gap-2.5 px-4 py-3 border-b border-black/5 bg-white/50">
-        <div className="w-9 h-9 rounded-full bg-gradient-to-b from-brand-400 to-brand-700 flex items-center justify-center text-white shadow-pop ring-1 ring-black/10 shrink-0 relative overflow-hidden">
+        <div className="w-9 h-9 rounded-full bg-gradient-to-b from-zinc-500 to-zinc-900 flex items-center justify-center text-white shadow-pop ring-1 ring-black/10 shrink-0 relative overflow-hidden">
           <span className="absolute inset-x-1.5 top-0 h-1/2 rounded-full bg-white/40 blur-[2px] pointer-events-none"></span>
           <Bot className="w-5 h-5 relative" />
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-sm font-bold text-slate-900 leading-tight flex items-center gap-1.5">
             <span className="truncate">Proofa Assistant</span>
-            <span className="text-[9px] font-bold bg-emerald-500/10 text-emerald-700 px-1.5 py-0.5 rounded-full border border-emerald-500/20 whitespace-nowrap">
+            <span className="text-[9px] font-bold bg-slate-500/10 text-slate-700 px-1.5 py-0.5 rounded-full border border-slate-500/20 whitespace-nowrap">
               DPDP Isolated
             </span>
           </p>
@@ -156,7 +156,7 @@ export const GlobalAssistant: React.FC<GlobalAssistantProps> = ({ open, onClose 
               <div
                 className={`max-w-[85%] px-3.5 py-2.5 text-[13px] leading-relaxed whitespace-pre-wrap break-words ${
                   mine
-                    ? 'text-white rounded-[18px] rounded-br-md bg-gradient-to-b from-brand-400 to-brand-600 shadow-pop'
+                    ? 'text-white rounded-[18px] rounded-br-md bg-gradient-to-b from-zinc-600 to-zinc-950 shadow-pop'
                     : 'text-slate-800 bg-white/85 border border-black/5 shadow-soft rounded-[18px] rounded-bl-md'
                 }`}
               >
@@ -208,7 +208,7 @@ export const GlobalAssistant: React.FC<GlobalAssistantProps> = ({ open, onClose 
             type="submit"
             disabled={!input.trim() || thinking}
             aria-label="Send message"
-            className="shrink-0 w-10 h-10 rounded-full bg-gradient-to-b from-brand-400 to-brand-700 text-white flex items-center justify-center shadow-pop ring-1 ring-black/10 transition active:scale-95 disabled:opacity-40"
+            className="shrink-0 w-10 h-10 rounded-full bg-gradient-to-b from-zinc-500 to-zinc-900 text-white flex items-center justify-center shadow-pop ring-1 ring-black/10 transition active:scale-95 disabled:opacity-40"
           >
             <Send className="w-4 h-4" />
           </button>

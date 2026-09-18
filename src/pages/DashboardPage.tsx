@@ -63,7 +63,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
       {/* Hero Welcome & Academic Context Banner */}
       <div className="glass rounded-4xl p-6 sm:p-8 relative overflow-hidden">
         <div className="absolute -right-12 -top-12 w-64 h-64 bg-brand-400/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute -left-16 -bottom-16 w-72 h-72 bg-purple-400/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute -left-16 -bottom-16 w-72 h-72 bg-slate-400/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2">
             <div className="inline-flex max-w-full items-center gap-x-2 bg-brand-50/80 text-brand-700 text-xs px-3 py-1 rounded-full border border-brand-200/70 shadow-soft">
@@ -83,14 +83,14 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
             <div className="text-left md:text-right">
               <span className="text-xs text-slate-500">Role Readiness</span>
               <div className="flex items-center space-x-2">
-                <span className="text-2xl font-black text-emerald-600">{readiness.readinessScore}</span>
+                <span className="text-2xl font-black text-slate-600">{readiness.readinessScore}</span>
                 <span className="text-xs text-slate-500">/ 10</span>
               </div>
             </div>
 
             <button
               onClick={onOpenCheckIn}
-              className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-md shadow-emerald-600/30 transition-all active:scale-95"
+              className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-slate-600 hover:bg-slate-500 shadow-md shadow-slate-600/30 transition-all active:scale-95"
             >
               <Clock className="w-4 h-4" />
               <span>60s Daily Check-in</span>
@@ -102,8 +102,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
         {constraints.upcomingExams.length > 0 && (
           <div className="mt-6 pt-4 border-t border-black/5 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 min-w-0">
-              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0"></span>
-              <span className="font-semibold text-amber-700">Upcoming Academic Checkpoint:</span>
+              <span className="w-2 h-2 rounded-full bg-slate-400 animate-pulse shrink-0"></span>
+              <span className="font-semibold text-slate-700">Upcoming Academic Checkpoint:</span>
               <span className="break-words">{constraints.upcomingExams[0].title} on {constraints.upcomingExams[0].date}</span>
             </div>
             <span className="text-[11px] text-slate-500 italic">
@@ -167,7 +167,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
               <FolderGit2 className="w-4 h-4 text-brand-600" />
               This Week's Verifiable Proof Milestone
             </span>
-            <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+            <span className="text-[11px] font-semibold text-slate-700 bg-slate-50 px-2 py-0.5 rounded border border-slate-200">
               Proof &gt; Hours
             </span>
           </div>
@@ -208,7 +208,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
             <div className="mt-4 flex items-baseline space-x-2">
               <span className="text-4xl font-black text-slate-900">{readiness.readinessScore}</span>
               <span className="text-slate-400 font-medium">/ 10</span>
-              <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded ml-auto">
+              <span className="text-xs font-semibold text-slate-700 bg-slate-50 px-2 py-0.5 rounded ml-auto">
                 {readiness.readinessScore >= 7 ? 'Interview Ready' : 'In Progress'}
               </span>
             </div>
@@ -250,11 +250,11 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
 
           <div className="text-xs text-slate-500 flex items-center space-x-3">
             <span className="flex items-center space-x-1">
-              <span className="w-2 h-2 rounded-full bg-purple-500"></span>
+              <span className="w-2 h-2 rounded-full bg-slate-500"></span>
               <span>Exam Prep</span>
             </span>
             <span className="flex items-center space-x-1">
-              <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+              <span className="w-2 h-2 rounded-full bg-slate-500"></span>
               <span>Coding / Dev</span>
             </span>
           </div>
@@ -273,7 +273,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
                   isSelected
                     ? 'bg-brand-600 text-white border-brand-600 shadow-soft'
                     : day.isExamDay
-                    ? 'bg-purple-50 text-purple-800 border-purple-200 hover:bg-purple-100'
+                    ? 'bg-slate-50 text-slate-800 border-slate-200 hover:bg-slate-100'
                     : isToday
                     ? 'bg-brand-50 text-brand-800 border-brand-200 hover:bg-brand-100'
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
@@ -282,7 +282,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
                 <div className="flex items-center space-x-1.5">
                   <span>{day.dayOfWeek.split(' ')[0]}</span>
                   {day.isExamDay && (
-                    <span className="text-[10px] px-1 bg-purple-200 text-purple-900 rounded font-bold">
+                    <span className="text-[10px] px-1 bg-slate-200 text-slate-900 rounded font-bold">
                       EXAM
                     </span>
                   )}
@@ -302,7 +302,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
               {selectedDay.dayOfWeek} Schedule ({selectedDay.date})
             </h3>
             {selectedDay.isExamDay && (
-              <span className="text-xs font-bold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-lg border border-purple-200">
+              <span className="text-xs font-bold text-slate-700 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200">
                 Exam Day: {selectedDay.examName || 'College Exam'}
               </span>
             )}

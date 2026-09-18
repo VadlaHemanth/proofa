@@ -97,7 +97,7 @@ export const ResourcesPage: React.FC = () => {
                 <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
                   {res.provider}
                 </span>
-                <span className="text-[10px] font-extrabold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded border border-emerald-200">
+                <span className="text-[10px] font-extrabold bg-slate-50 text-slate-700 px-2 py-0.5 rounded border border-slate-200">
                   100% Free
                 </span>
               </div>

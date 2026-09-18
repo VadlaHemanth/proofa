@@ -149,7 +149,7 @@ const AppContent: React.FC = () => {
               <span className="font-bold text-slate-800">Proofa</span> • Private Student Growth Passport • Hyderabad Tech Wedge
             </p>
             <div className="flex items-center space-x-4 text-[11px]">
-              <span className="text-emerald-700 font-semibold">DPDP Act 2023 Compliant</span>
+              <span className="text-slate-700 font-semibold">DPDP Act 2023 Compliant</span>
               <span>•</span>
               <span>Truth over Polish</span>
               <span>•</span>
@@ -165,11 +165,11 @@ const AppContent: React.FC = () => {
           onClick={() => setIsAssistantOpen(true)}
           aria-label="Open Proofa quick assistant"
           title="Ask Proofa anything"
-          className="orb-in fixed z-40 bottom-[104px] lg:bottom-6 right-4 lg:right-6 w-14 h-14 rounded-full bg-gradient-to-b from-brand-400 via-brand-600 to-brand-700 text-white flex items-center justify-center shadow-pop ring-1 ring-black/10 transition-transform hover:scale-105 active:scale-95 overflow-hidden"
+          className="orb-in fixed z-40 bottom-[104px] lg:bottom-6 right-4 lg:right-6 w-14 h-14 rounded-full bg-gradient-to-b from-zinc-500 via-zinc-800 to-black text-white flex items-center justify-center shadow-pop ring-1 ring-white/40 transition-transform hover:scale-105 active:scale-95 overflow-hidden"
         >
           <span className="absolute inset-x-2.5 top-1 h-1/2 rounded-full bg-white/40 blur-[3px] pointer-events-none"></span>
           <MessageSquareQuote className="w-6 h-6 relative" />
-          <span className="absolute top-2.5 right-2.5 w-2.5 h-2.5 rounded-full bg-emerald-400 ring-2 ring-white/80"></span>
+          <span className="absolute top-2.5 right-2.5 w-2.5 h-2.5 rounded-full bg-white ring-2 ring-zinc-500"></span>
         </button>
       )}
 

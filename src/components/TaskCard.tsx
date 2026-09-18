@@ -14,13 +14,13 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, onToggle, onReschedule
   const getCategoryColor = () => {
     switch (task.category) {
       case 'College Exam Prep':
-        return 'bg-purple-50 text-purple-700 border-purple-200';
+        return 'bg-slate-50 text-slate-700 border-slate-200';
       case 'Coding':
-        return 'bg-blue-50 text-blue-700 border-blue-200';
+        return 'bg-slate-50 text-slate-700 border-slate-200';
       case 'Project':
-        return 'bg-emerald-50 text-emerald-700 border-emerald-200';
+        return 'bg-slate-50 text-slate-700 border-slate-200';
       case 'DSA':
-        return 'bg-amber-50 text-amber-700 border-amber-200';
+        return 'bg-slate-50 text-slate-700 border-slate-200';
       case 'Revision':
         return 'bg-slate-100 text-slate-700 border-slate-200';
       default:
@@ -34,7 +34,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, onToggle, onReschedule
         isCompleted
           ? 'bg-slate-50/80 border-slate-200 text-slate-500'
           : task.isExamDayTask
-          ? 'bg-purple-50/30 border-purple-200 hover:border-purple-300'
+          ? 'bg-slate-50/30 border-slate-200 hover:border-slate-300'
           : 'bg-white border-slate-200 hover:border-brand-300 hover:shadow-soft'
       }`}
     >
@@ -43,11 +43,11 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, onToggle, onReschedule
         <div className="flex items-start space-x-3 flex-1 min-w-0">
           <button
             onClick={() => onToggle(task.id)}
-            className="mt-0.5 text-slate-400 hover:text-emerald-600 transition-colors shrink-0"
+            className="mt-0.5 text-slate-400 hover:text-slate-600 transition-colors shrink-0"
             title={isCompleted ? 'Mark as incomplete' : 'Mark task complete'}
           >
             {isCompleted ? (
-              <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+              <CheckCircle2 className="w-5 h-5 text-slate-600" />
             ) : (
               <Circle className="w-5 h-5 text-slate-300 hover:text-slate-400" />
             )}
@@ -59,7 +59,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, onToggle, onReschedule
                 {task.category}
               </span>
               {task.isExamDayTask && (
-                <span className="text-[10px] font-semibold bg-rose-50 text-rose-700 px-1.5 py-0.5 rounded border border-rose-200">
+                <span className="text-[10px] font-semibold bg-slate-50 text-slate-700 px-1.5 py-0.5 rounded border border-slate-200">
                   College Exam Priority
                 </span>
               )}

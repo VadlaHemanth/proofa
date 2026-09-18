@@ -94,7 +94,7 @@ export const DailyCheckInModal: React.FC<DailyCheckInModalProps> = ({ isOpen, on
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-100">
           <div className="flex items-center space-x-2.5">
-            <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+            <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
               <Clock className="w-4 h-4" />
             </div>
             <div>
@@ -112,7 +112,7 @@ export const DailyCheckInModal: React.FC<DailyCheckInModalProps> = ({ isOpen, on
 
         {submitted ? (
           <div className="py-12 text-center space-y-3">
-            <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto animate-bounce">
+            <div className="w-14 h-14 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center mx-auto animate-bounce">
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">Plan Adapted Successfully!</h3>
@@ -139,7 +139,7 @@ export const DailyCheckInModal: React.FC<DailyCheckInModalProps> = ({ isOpen, on
                       onClick={() => toggleTask(task.id)}
                       className={`flex items-start space-x-3 p-2.5 rounded-xl border text-sm cursor-pointer transition-all ${
                         isChecked
-                          ? 'bg-emerald-50/70 border-emerald-300 text-emerald-900'
+                          ? 'bg-slate-50/70 border-slate-300 text-slate-900'
                           : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                       }`}
                     >
@@ -147,7 +147,7 @@ export const DailyCheckInModal: React.FC<DailyCheckInModalProps> = ({ isOpen, on
                         type="checkbox"
                         checked={isChecked}
                         onChange={() => {}}
-                        className="mt-0.5 rounded text-emerald-600 focus:ring-emerald-500 w-4 h-4 cursor-pointer"
+                        className="mt-0.5 rounded text-slate-600 focus:ring-slate-500 w-4 h-4 cursor-pointer"
                       />
                       <div className="flex-1 min-w-0">
                         <p className={`font-medium leading-snug ${isChecked ? 'line-through text-slate-500' : ''}`}>

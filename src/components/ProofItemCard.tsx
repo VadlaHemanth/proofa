@@ -26,15 +26,15 @@ export const ProofItemCard: React.FC<ProofItemCardProps> = ({ item, onToggleShar
   const getIcon = () => {
     switch (item.type) {
       case 'github_repo':
-        return <FolderGit2 className="w-5 h-5 text-indigo-600" />;
+        return <FolderGit2 className="w-5 h-5 text-slate-600" />;
       case 'deployed_demo':
-        return <Globe className="w-5 h-5 text-emerald-600" />;
+        return <Globe className="w-5 h-5 text-slate-600" />;
       case 'code_snippet':
-        return <Code2 className="w-5 h-5 text-amber-600" />;
+        return <Code2 className="w-5 h-5 text-slate-600" />;
       case 'certificate':
-        return <Award className="w-5 h-5 text-purple-600" />;
+        return <Award className="w-5 h-5 text-slate-600" />;
       case 'mentor_note':
-        return <UserCheck className="w-5 h-5 text-blue-600" />;
+        return <UserCheck className="w-5 h-5 text-slate-600" />;
       default:
         return <FolderGit2 className="w-5 h-5 text-slate-600" />;
     }
@@ -73,12 +73,12 @@ export const ProofItemCard: React.FC<ProofItemCardProps> = ({ item, onToggleShar
 
           {/* Verification Badge */}
           {item.verificationStatus === 'verified' ? (
-            <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+            <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-slate-50 text-slate-700 border border-slate-200">
+              <CheckCircle2 className="w-3.5 h-3.5 text-slate-600" />
               <span>Verified Proof</span>
             </span>
           ) : (
-            <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-amber-50 text-amber-700 border border-amber-200">
+            <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-slate-50 text-slate-700 border border-slate-200">
               <span>Unverified</span>
             </span>
           )}
@@ -172,7 +172,7 @@ export const ProofItemCard: React.FC<ProofItemCardProps> = ({ item, onToggleShar
           {/* Delete action */}
           <button
             onClick={() => onDelete(item.id)}
-            className="text-slate-300 hover:text-rose-500 p-1 rounded transition-colors"
+            className="text-slate-300 hover:text-slate-500 p-1 rounded transition-colors"
             title="Remove proof item"
           >
             <Trash2 className="w-3.5 h-3.5" />

@@ -87,7 +87,7 @@ export const AiCompanionPage: React.FC = () => {
             <div>
               <h1 className="text-xl font-black text-slate-900 flex items-center gap-2">
                 <span>Private Growth Companion</span>
-                <span className="text-[10px] font-bold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full border border-emerald-200">
+                <span className="text-[10px] font-bold bg-slate-50 text-slate-700 px-2 py-0.5 rounded-full border border-slate-200">
                   DPDP Isolated
                 </span>
               </h1>

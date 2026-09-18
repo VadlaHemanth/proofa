@@ -158,7 +158,7 @@ export const ProofLockerPage: React.FC = () => {
               onClick={() => setFilterType(tab.id)}
               className={`shrink-0 px-3 py-1.5 rounded-lg font-medium transition-colors whitespace-nowrap ${
                 filterType === tab.id
-                  ? 'bg-slate-900 text-white font-semibold'
+                  ? 'bg-gradient-to-b from-brand-500 to-brand-700 text-white font-semibold shadow-pop ring-1 ring-black/10'
                   : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
               }`}
             >

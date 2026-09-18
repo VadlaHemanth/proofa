@@ -8,21 +8,31 @@
     overflow-x: clip;
   }
   body {
-    background-color: #f5f5f7;
+    background-color: #f6f3ee;
     background-image:
-      radial-gradient(640px 320px at 8% -4%, rgba(0, 113, 227, 0.09), transparent 60%),
-      radial-gradient(560px 300px at 92% 2%, rgba(175, 82, 222, 0.08), transparent 60%),
-      radial-gradient(760px 420px at 50% 112%, rgba(52, 199, 89, 0.07), transparent 60%);
+      radial-gradient(680px 340px at 6% -6%, rgba(255, 183, 140, 0.35), transparent 62%),
+      radial-gradient(620px 340px at 94% 4%, rgba(196, 168, 250, 0.38), transparent 62%),
+      radial-gradient(560px 320px at 88% 88%, rgba(125, 240, 200, 0.3), transparent 62%),
+      radial-gradient(720px 380px at 8% 96%, rgba(147, 178, 248, 0.32), transparent 62%),
+      radial-gradient(500px 300px at 50% 50%, rgba(255, 255, 255, 0.5), transparent 70%);
     background-attachment: fixed;
-    color: #1d1d1f;
+    color: #211d33;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+  }
+  h1 {
+    font-family: 'Sora', 'Inter', -apple-system, sans-serif;
+    letter-spacing: -0.02em;
   }
   pre {
     max-width: 100%;
   }
   ::selection {
-    background: rgba(0, 113, 227, 0.22);
+    background: rgba(81, 71, 229, 0.25);
+  }
+  :focus-visible {
+    outline: 2px solid rgba(81, 71, 229, 0.55);
+    outline-offset: 2px;
   }
 }
 
@@ -35,60 +45,137 @@
     scrollbar-width: none;
   }
 
-  /* Apple Liquid-Glass surfaces (navigation layer only) */
+  /* Iridescent liquid-glass surfaces (navigation layer) */
   .glass {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.64));
+    background:
+      linear-gradient(135deg, rgba(139, 124, 246, 0.1), rgba(103, 232, 249, 0.08) 45%, rgba(255, 255, 255, 0) 70%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.62));
     -webkit-backdrop-filter: blur(22px) saturate(180%);
     backdrop-filter: blur(22px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    outline: 1px solid rgba(0, 0, 0, 0.04);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    outline: 1px solid rgba(90, 70, 200, 0.08);
+    box-shadow:
+      0 8px 32px rgba(46, 32, 120, 0.1),
+      0 0 24px rgba(139, 92, 246, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.85);
   }
   .glass-deep {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 246, 250, 0.86));
-    -webkit-backdrop-filter: blur(28px) saturate(180%);
-    backdrop-filter: blur(28px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.75);
-    outline: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 24px 70px rgba(10, 30, 60, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    background:
+      linear-gradient(135deg, rgba(139, 124, 246, 0.14), rgba(103, 232, 249, 0.1) 45%, rgba(255, 255, 255, 0) 70%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(245, 242, 250, 0.88));
+    -webkit-backdrop-filter: blur(28px) saturate(190%);
+    backdrop-filter: blur(28px) saturate(190%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    outline: 1px solid rgba(90, 70, 200, 0.1);
+    box-shadow:
+      0 24px 70px rgba(46, 32, 120, 0.2),
+      0 0 44px rgba(139, 92, 246, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  }
+  .text-aurora {
+    background: linear-gradient(92deg, #5147e5 10%, #9333ea 48%, #db2777 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
 
-/* Glossy Apple-style primary buttons (applies everywhere automatically) */
+/* Glossy aurora primary pills — shimmer sweep on hover */
 button.bg-brand-600,
 a.bg-brand-600 {
-  background-image: linear-gradient(180deg, #3d9bff 0%, #0071e3 55%, #0063cc 100%);
-  border: 1px solid rgba(0, 84, 170, 0.45);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 999px;
+  background-image: linear-gradient(180deg, #8b8df7 0%, #5147e5 55%, #4338ca 100%);
+  border: 1px solid rgba(64, 52, 170, 0.5);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.55),
-    inset 0 -1px 0 rgba(0, 40, 90, 0.25),
-    0 8px 20px rgba(0, 113, 227, 0.35);
+    inset 0 -2px 6px rgba(30, 20, 100, 0.3),
+    0 10px 26px rgba(81, 71, 229, 0.42),
+    0 0 18px rgba(168, 130, 250, 0.35);
+}
+button.bg-brand-600::after,
+a.bg-brand-600::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 55%;
+  height: 140%;
+  background: linear-gradient(105deg, transparent 25%, rgba(255, 255, 255, 0.55) 50%, transparent 75%);
+  transform: translateX(-180%) skewX(-16deg);
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  pointer-events: none;
+  z-index: 2;
+}
+button.bg-brand-600:hover::after,
+a.bg-brand-600:hover::after {
+  transform: translateX(260%) skewX(-16deg);
 }
 button.bg-brand-600:hover,
 a.bg-brand-600:hover {
-  filter: brightness(1.07);
+  filter: brightness(1.06);
+  transform: translateY(-1px);
 }
 button.bg-brand-600:active,
 a.bg-brand-600:active {
-  transform: translateY(1px) scale(0.99);
-  filter: brightness(0.97);
+  transform: translateY(1px) scale(0.98);
 }
+
+/* Mint-gloss secondary pills */
 button.bg-emerald-600,
 a.bg-emerald-600 {
-  background-image: linear-gradient(180deg, #48d672 0%, #1fa84f 60%, #189a45 100%);
-  border: 1px solid rgba(15, 120, 55, 0.45);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 999px;
+  background-image: linear-gradient(180deg, #5eead4 0%, #10b981 55%, #0d9668 100%);
+  border: 1px solid rgba(10, 130, 90, 0.45);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(0, 70, 30, 0.25),
-    0 8px 20px rgba(31, 168, 79, 0.35);
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -2px 6px rgba(0, 70, 45, 0.28),
+    0 10px 24px rgba(16, 185, 129, 0.38);
 }
 button.bg-emerald-600:hover,
 a.bg-emerald-600:hover {
-  filter: brightness(1.06);
+  filter: brightness(1.05);
+  transform: translateY(-1px);
 }
 button.bg-emerald-600:active,
 a.bg-emerald-600:active {
-  transform: translateY(1px) scale(0.99);
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Glossy aurora range sliders (orange knob, like blown glass) */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, rgba(129, 131, 243, 0.85), rgba(196, 168, 250, 0.5)),
+    rgba(30, 20, 80, 0.08);
+  box-shadow: inset 0 1px 3px rgba(30, 20, 80, 0.18), 0 1px 0 rgba(255, 255, 255, 0.7);
+  outline-offset: 4px;
+  cursor: pointer;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, #fff7ed 0%, #fdba74 38%, #f97316 72%, #c2410c 100%);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.5), inset 0 -2px 4px rgba(120, 40, 0, 0.35);
+}
+input[type='range']::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, #fff7ed 0%, #fdba74 38%, #f97316 72%, #c2410c 100%);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.5);
 }
 
 /* Springy Apple-like motion for overlays */
@@ -117,6 +204,15 @@ a.bg-emerald-600:active {
 }
 .orb-in {
   animation: orb-in 0.25s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 /* Prevent iOS Safari auto-zoom on focus on phones */

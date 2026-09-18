@@ -71,8 +71,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenCheckIn }) =
               <span className="hidden min-[480px]:inline">Private Student Growth Passport • Hyderabad JNTUH Wedge</span>
               <span className="min-[480px]:hidden">Student Growth Passport</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              Welcome back, {profile.fullName.split(' ')[0]}
+            <h1 className="text-2xl sm:text-[32px] sm:leading-[1.15] font-bold">
+              Welcome back, <span className="text-aurora">{profile.fullName.split(' ')[0]}</span>
             </h1>
             <p className="text-sm text-slate-600 max-w-xl break-words">
               Targeting <span className="font-semibold text-slate-900">{goal.targetRole}</span> ({goal.stipendExpectation}). Your timetable prioritizes your college mid-terms while building verifiable proof every week.

@@ -103,16 +103,33 @@ export const ReadinessPage: React.FC = () => {
               </span>
             </div>
 
-            <div className="mt-4 flex items-baseline space-x-2">
-              <span className="text-6xl font-black text-slate-900 tracking-tight">{readiness.readinessScore}</span>
-              <span className="text-2xl text-slate-400 font-medium">/ 10</span>
-            </div>
-
-            <div className="w-full bg-slate-900/10 h-3 rounded-full mt-4 overflow-hidden">
-              <div
-                className="bg-gradient-to-r from-emerald-400 to-emerald-600 h-full rounded-full transition-all duration-700"
-                style={{ width: `${readiness.readinessScore * 10}%` }}
-              ></div>
+            <div className="mt-4 flex items-center justify-center">
+              <div className="relative w-40 h-40">
+                <svg viewBox="0 0 120 120" className="w-full h-full -rotate-90 drop-shadow-[0_10px_24px_rgba(81,71,229,0.35)]">
+                  <defs>
+                    <linearGradient id="readyHalo" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#7dd3fc" />
+                      <stop offset="45%" stopColor="#6157f0" />
+                      <stop offset="100%" stopColor="#e879f9" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(30,20,80,0.08)" strokeWidth="11" />
+                  <circle
+                    cx="60"
+                    cy="60"
+                    r="52"
+                    fill="none"
+                    stroke="url(#readyHalo)"
+                    strokeWidth="11"
+                    strokeLinecap="round"
+                    strokeDasharray={`${(readiness.readinessScore / 10) * 326.7} 326.7`}
+                  />
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <span className="font-display text-4xl font-bold text-slate-900">{readiness.readinessScore}</span>
+                  <span className="text-[11px] text-slate-500 font-semibold">/ 10 ready</span>
+                </div>
+              </div>
             </div>
           </div>
 

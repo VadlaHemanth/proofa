@@ -199,7 +199,7 @@ export const PublicPassportPage: React.FC = () => {
                 onClick={() => setActiveFilter(f.id as any)}
                 className={`px-3 py-1.5 rounded-lg font-medium transition-colors ${
                   activeFilter === f.id
-                    ? 'bg-slate-900 text-white font-bold'
+                    ? 'bg-gradient-to-b from-brand-500 to-brand-700 text-white font-bold shadow-pop ring-1 ring-black/10'
                     : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
                 }`}
               >

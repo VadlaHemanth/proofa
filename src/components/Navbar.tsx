@@ -36,18 +36,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckIn }) => {
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-white/70 backdrop-blur-xl backdrop-saturate-150 supports-[backdrop-filter]:bg-white/60 border-b border-black/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-2 sm:top-3 z-40 px-2 sm:px-4">
+      <div className="max-w-7xl mx-auto glass rounded-2xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-2 h-16">
           {/* Brand Logo & Wedge Tagline */}
           <div className="flex items-center space-x-3 shrink-0 min-w-0">
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 rounded-[12px] bg-gradient-to-b from-brand-400 via-brand-600 to-brand-700 flex items-center justify-center text-white shadow-pop ring-1 ring-black/10 group-hover:scale-105 transition-transform relative overflow-hidden">
-                <span className="absolute inset-x-2 top-0.5 h-1/2 rounded-full bg-white/30 blur-[3px] pointer-events-none"></span>
-                <ShieldCheck className="w-6 h-6 relative" />
+              <div className="w-10 h-10 rounded-[14px] bg-[conic-gradient(from_210deg,#7dd3fc,#818cf8,#e879f9,#7dd3fc)] flex items-center justify-center text-white shadow-pop ring-1 ring-white/60 group-hover:scale-105 group-hover:rotate-3 transition-transform relative overflow-hidden">
+                <span className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/10 pointer-events-none"></span>
+                <span className="absolute inset-x-2 top-0.5 h-1/2 rounded-full bg-white/50 blur-[3px] pointer-events-none"></span>
+                <ShieldCheck className="w-6 h-6 relative drop-shadow" />
               </div>
               <div>
-                <span className="font-extrabold text-xl tracking-tight text-slate-900 flex items-center gap-1.5">
+                <span className="font-display font-bold text-xl tracking-tight text-slate-900 flex items-center gap-1.5">
                   <span>Proof<span className="text-brand-600">a</span></span>
                   <span className="text-[10px] font-semibold tracking-wide bg-brand-50 text-brand-700 px-1.5 py-0.5 rounded border border-brand-200 uppercase">
                     Passport
@@ -69,13 +70,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckIn }) => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`whitespace-nowrap flex items-center gap-1.5 px-2 py-2 rounded-lg transition-colors ${
+                  className={`whitespace-nowrap flex items-center gap-1.5 px-3 py-2 rounded-full transition-all ${
                     isActive
-                      ? 'bg-brand-50 text-brand-700 font-semibold shadow-soft'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                      ? 'bg-gradient-to-b from-brand-400 to-brand-700 text-white font-semibold shadow-pop ring-1 ring-black/10'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-white/70'
                   }`}
                 >
-                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-brand-600' : 'text-slate-500'}`} />
+                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-slate-500'}`} />
                   <span>{item.label}</span>
                 </Link>
               );
